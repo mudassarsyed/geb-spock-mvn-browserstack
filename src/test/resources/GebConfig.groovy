@@ -3,6 +3,8 @@
 	
 	See: http://www.gebish.org/manual/current/configuration.html
 */
+
+import geb.driver.BrowserStackDriverFactory
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.chrome.ChromeDriverService
 import org.openqa.selenium.os.ExecutableFinder
@@ -31,10 +33,11 @@ File findDriverExecutable() {
 }
 
 driver = {
-    ChromeDriverService.Builder serviceBuilder = new ChromeDriverService.Builder()
-        .usingAnyFreePort()
-        .usingDriverExecutable(findDriverExecutable())
-    new ChromeDriver(serviceBuilder.build())
+    def username = "mudassarsyed2"
+    assert username
+    def accessKey = "8ZezGR6GyZjP2ZqrXphh"
+    assert accessKey
+    new BrowserStackDriverFactory().create(true, username, accessKey)
 }
 
 baseUrl = "http://gebish.org"

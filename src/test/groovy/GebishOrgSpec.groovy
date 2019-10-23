@@ -2,20 +2,23 @@ import geb.spock.GebSpec
 
 class GebishOrgSpec extends GebSpec {
 
-    def "can get to the current Book of Geb"() {
+    def "Search BrowserStack on Google"() {
         when:
         to GebishOrgHomePage
 
         and:
-        manualsMenu.open()
+        q = "BrowserStack"
 
         then:
-        manualsMenu.links[0].text().startsWith("current")
+        waitFor { at TheBookOfGebPage }
 
-        when:
-        manualsMenu.links[0].click()
+        //and:
+        //firstResultLink.text() == "Wikipedia"
 
-        then:
-        at TheBookOfGebPage
+        //when:
+        //firstResultLink.click()
+
+        //then:
+        //waitFor { at WikipediaPage }
     }
 }
