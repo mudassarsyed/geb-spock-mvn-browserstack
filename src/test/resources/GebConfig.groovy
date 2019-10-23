@@ -16,7 +16,7 @@ def chrome = '{"build":"mudassar","browser":"Chrome","os":"Windows""os_version":
             assert accessKey
 	def browserstackLocal = System.getenv("BROWSERSTACK_LOCAL");
 	def browserstackLocalIdentifier = System.getenv("BROWSERSTACK_LOCAL_IDENTIFIER");
-            new BrowserStackDriverFactory().create("", username, accessKey, chrome)
+        new BrowserStackDriverFactory().create("", username, accessKey, ['build': chrome.build, 'browser':Chrome.browser,'os': chrome.os,'os_version': chrome.os_version,'browser_version': chrome.browser_version,'browserstack.local': browserstackLocal,"browserstack.localIdentifier":browserstackLocalIdentifier])
 
         }
 baseUrl = "http://google.com"
