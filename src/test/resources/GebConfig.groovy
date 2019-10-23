@@ -8,11 +8,13 @@ import geb.driver.BrowserStackDriverFactory
 
 
         driver = {
-            def username = "mudassarsyed2"
+            def username = System.getenv("BROWSERSTACK_USERNAME")
             assert username
-            def accessKey = "8ZezGR6GyZjP2ZqrXphh"
+            def accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY")
             assert accessKey
-            new BrowserStackDriverFactory().create("", username, accessKey, ['build': 'mudassar', 'browser':'Chrome','os': 'Windows','os_version': '8','browser_version': '77.0','browserstack.local': 'true'])
+	def browserstackLocal = System.getenv("BROWSERSTACK_LOCAL");
+	def browserstackLocalIdentifier = System.getenv("BROWSERSTACK_LOCAL_IDENTIFIER");
+            new BrowserStackDriverFactory().create("", username, accessKey, ['build': 'mudassar', 'browser':'Chrome','os': 'Windows','os_version': '8','browser_version': '77.0','browserstack.local': browserstackLocal,"browserstack.localIdentifier":browserstackLocalIdentifier])
 
         }
 baseUrl = "http://google.com"
