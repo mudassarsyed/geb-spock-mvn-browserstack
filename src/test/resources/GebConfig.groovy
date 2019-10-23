@@ -5,39 +5,14 @@
 */
 
 import geb.driver.BrowserStackDriverFactory
-import org.openqa.selenium.chrome.ChromeDriver
-import org.openqa.selenium.chrome.ChromeDriverService
-import org.openqa.selenium.os.ExecutableFinder
 
-import static org.apache.commons.lang3.SystemUtils.IS_OS_LINUX
-import static org.apache.commons.lang3.SystemUtils.IS_OS_MAC
-import static org.apache.commons.lang3.SystemUtils.IS_OS_WINDOWS
 
-File findDriverExecutable() {
-    def defaultExecutable = new ExecutableFinder().find("chromedriver")
-    if (defaultExecutable) {
-        new File(defaultExecutable)
-    } else {
-        new File("drivers").listFiles().findAll {
-            !it.name.endsWith(".version")
-        }.find {
-            if (IS_OS_LINUX) {
-                it.name.contains("linux")
-            } else if (IS_OS_MAC) {
-                it.name.contains("mac")
-            } else if (IS_OS_WINDOWS) {
-                it.name.contains("windows")
-            }
+        driver = {
+            def username = "<<username>>"
+            assert username
+            def accessKey = "<<access_key>>"
+            assert accessKey
+            new BrowserStackDriverFactory().create("", username, accessKey, ['build': 'mudassar', 'browser':'Chrome','os': 'Windows','os_version': '8','browser_version': '77.0','browserstack.local': 'false'])
+
         }
-    }
-}
-
-driver = {
-    def username = "mudassarsyed2"
-    assert username
-    def accessKey = "8ZezGR6GyZjP2ZqrXphh"
-    assert accessKey
-    new BrowserStackDriverFactory().create(true, username, accessKey)
-}
-
-baseUrl = "http://gebish.org"
+baseUrl = "http://google.com"
