@@ -8,6 +8,8 @@ This is a simple example project for using Geb with Maven. It is setup to use Fi
 
 ## Usage
 
+Update your BrowserStack Username and Password in GebConfig.groovy file
+
 Just check it out and run…
 
     mvn test
