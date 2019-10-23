@@ -8,9 +8,9 @@ import geb.driver.BrowserStackDriverFactory
 
 
         driver = {
-            def username = "<<username>>"
+            def username = "mudassarsyed2"
             assert username
-            def accessKey = "<<access_key>>"
+            def accessKey = "8ZezGR6GyZjP2ZqrXphh"
             assert accessKey
             new BrowserStackDriverFactory().create("", username, accessKey, ['build': 'mudassar', 'browser':'Chrome','os': 'Windows','os_version': '8','browser_version': '77.0','browserstack.local': 'false'])
 
