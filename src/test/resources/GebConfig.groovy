@@ -5,7 +5,8 @@
 */
 
 import geb.driver.BrowserStackDriverFactory
-def chrome = '[\'build\': \'mudassar\', \'browser\':\'Chrome\',\'os\': \'Windows\',\'os_version\': \'8\',\'browser_version\': \'77.0\',\'browserstack.local\': browserstackLocal,"browserstack.localIdentifier":browserstackLocalIdentifier]'
+def chrome = '{"build":"mudassar","browser":"Chrome","os":"Windows""os_version":"8","browser_version":"77.0"}'
+
 
 
         driver = {
