@@ -1,10 +1,10 @@
-# Example Geb and Maven Project
+# BrowserStack Example Geb and Spock Maven Project
 
 [![Build Status][build_status]](https://circleci.com/gh/geb/geb-example-gradle/tree/master)
 
 ## Description
 
-This is a simple example project for using Geb with Maven. It is setup to use Firefox driver.
+This is a simple example project for using Geb with Maven to run tests on BrowserStack.
 
 ## Usage
 
