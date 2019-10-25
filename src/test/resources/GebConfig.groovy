@@ -14,7 +14,7 @@ driver = {
     assert accessKey
     def browserstackLocal = System.getenv("BROWSERSTACK_LOCAL");
     def browserstackLocalIdentifier = System.getenv("BROWSERSTACK_LOCAL_IDENTIFIER");
-    new BrowserStackDriverFactory().create("", username, accessKey, ${firefox})
+    new BrowserStackDriverFactory().create("", username, accessKey,"${firefox}")
 
 }
 baseUrl = "http://google.com"
