@@ -5,8 +5,6 @@
 */
 
 import geb.driver.BrowserStackDriverFactory
-def firefox = ['build': 'mudassar', 'browser':'firefox','os': 'Windows','os_version': '8','browser_version': '69','browserstack.local': browserstackLocal,"browserstack.localIdentifier":browserstackLocalIdentifier]
-
 driver = {
     def username = System.getenv("BROWSERSTACK_USERNAME")
     assert username
@@ -14,7 +12,7 @@ driver = {
     assert accessKey
     def browserstackLocal = System.getenv("BROWSERSTACK_LOCAL");
     def browserstackLocalIdentifier = System.getenv("BROWSERSTACK_LOCAL_IDENTIFIER");
-    new BrowserStackDriverFactory().create("", username, accessKey,"${firefox}")
+    new BrowserStackDriverFactory().create("", username, accessKey,['build': 'mudassar', 'browser':'firefox','os': 'Windows','os_version': '8','browser_version': '69','browserstack.local': browserstackLocal,"browserstack.localIdentifier":browserstackLocalIdentifier])
 
 }
 baseUrl = "http://google.com"
