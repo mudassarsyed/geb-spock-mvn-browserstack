@@ -18,6 +18,7 @@ driver = {
     def browserstackLocalIdentifier = System.getenv("BROWSERSTACK_LOCAL_IDENTIFIER");
     new BrowserStackDriverFactory().create(username, accessKey,['build': 'mudassar', 'browser':'firefox','os': 'Windows','os_version': '8','browser_version': '69','browserstack.local': browserstackLocal,"browserstack.localIdentifier":browserstackLocalIdentifier])
 }
+   break
 case "chrome" :
 driver = {
     def username = System.getenv("BROWSERSTACK_USERNAME")
@@ -28,6 +29,7 @@ driver = {
     def browserstackLocalIdentifier = System.getenv("BROWSERSTACK_LOCAL_IDENTIFIER");
     new BrowserStackDriverFactory().create(username, accessKey,['build': 'mudassar', 'browser':'chrome','os': 'Windows','os_version': '8','browser_version': '76','browserstack.local': browserstackLocal,"browserstack.localIdentifier":browserstackLocalIdentifier])
 }
+    break
 }
 
 baseUrl = "http://google.com"
