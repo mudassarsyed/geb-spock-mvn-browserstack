@@ -1,6 +1,6 @@
 import geb.spock.GebSpec
 
-class GebishOrgSpec extends GebSpec {
+class GebishOrg1Spec extends GebSpec {
 
     def "Search BrowserStack on Google"() {
         when:
