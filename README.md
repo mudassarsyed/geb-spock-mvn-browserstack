@@ -17,7 +17,7 @@ To run Tests in Parallel…
 
     mvn test Dbrowser=<browser_profile_specified_in_GebConfig.groovy file>
 
-## No of Paralell Threads
+## No of Parallel Threads
 
 If you want to configure the number os parallel threads, you can mention the same in the <configuration> tag in the POM.xml
 
