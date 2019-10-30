@@ -1,4 +1,4 @@
-# Geb-Spock-browserstack with Maven
+# Geb-Spock-BrowserStack with Maven
 
 [Geb](https://gebish.org) Integration with BrowserStack.
 
