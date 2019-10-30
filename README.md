@@ -1,26 +1,34 @@
-# BrowserStack Example Geb and Spock Maven Project
+# Geb-Spock-browserstack with Maven
+
+[Geb](https://gebish.org) Integration with BrowserStack.
+
+![BrowserStack Logo](https://d98b8t1nnulk5.cloudfront.net/production/images/layout/logo-header.png?1469004780)
+
+## Setup
+
+* Clone the repo
+* Install dependencies `mvn compile`
+* Update `GebConfig.groovy` files inside the `gebspock/src/test/resources` directory with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
+
+## Running your tests
+
+- To run a single test, run `mvn test -e -Dbrowser=<browser profile set in GebConfig.groovy> -P single`
+- To run local tests, run `mvn test -e -Dbrowser=<browser profile set in GebConfig.groovy> -P local`
+- To run parallel tests, run `mvn test -e -Dbrowser=<browser profile set in GebConfig.groovy> -P parallel`
+
+ Understand how many parallel sessions you need by using our [Parallel Test Calculator](https://www.browserstack.com/automate/parallel-calculator?ref=github)
 
 
-## Description
+## Notes
+* You can view your test results on the [BrowserStack Automate dashboard](https://www.browserstack.com/automate)
+* To test on a different set of browsers, check out our [platform configurator](https://www.browserstack.com/automate/java#setting-os-and-browser)
+* You can export the environment variables for the Username and Access Key of your BrowserStack account
 
-This is a simple example project for using Geb with Maven to run tests on BrowserStack.
-
-## Usage
-
-Update your BrowserStack Username and Password in GebConfig.groovy file and mention the capabilities
-
-Just check it out and run…
-
-    mvn test
-    
-To run Tests in Parallel…
-
-    mvn test -e -Dbrowser=<browser_profile_specified_in_GebConfig.groovy file>
-
-## No of Parallel Threads
-
-If you want to configure the number os parallel threads, you can mention the same in the <configuration> tag in the POM.xml
-
-## Code push on this repo
-
-Push code using  git push -u splash master
+  ```
+  export BROWSERSTACK_USERNAME=<browserstack-username> &&
+  export BROWSERSTACK_ACCESS_KEY=<browserstack-access-key>
+  ```
+## Additional Resources
+* [Customizing your tests on BrowserStack](https://www.browserstack.com/automate/capabilities)
+* [Browsers & mobile devices for selenium testing on BrowserStack](https://www.browserstack.com/list-of-browsers-and-platforms?product=automate)
+* [Using REST API to access information about your tests via the command-line interface](https://www.browserstack.com/automate/rest-api)
