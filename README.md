@@ -8,7 +8,8 @@
 
 * Clone the repo
 * Install dependencies `mvn compile`
-* Update `GebConfig.groovy` files inside the `gebspock/src/test/resources` directory with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
+* Update `GebConfig.groovy` file inside the `gebspock/src/test/resources` directory with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
+* Update `GebConfig.groovy` file inside the `gebspock/src/test/resources` directory with your browser profile by defining the [required capabilities](https://www.browserstack.com/automate/capabilities)
 
 ## Running your tests
 
