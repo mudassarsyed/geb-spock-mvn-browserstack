@@ -21,4 +21,6 @@ To run Tests in Parallel…
 
 If you want to configure the number os parallel threads, you can mention the same in the <configuration> tag in the POM.xml
 
+## Code push on this repo
+
 Push code using  git push -u splash master
