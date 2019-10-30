@@ -11,7 +11,7 @@
 * Update `GebConfig.groovy` file inside the `gebspock/src/test/resources` directory with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
 * Update `GebConfig.groovy` file inside the `gebspock/src/test/resources` directory with your browser profile by defining the [required capabilities](https://www.browserstack.com/automate/capabilities)
 * Local Testing is turned on by Default in this repo and will require the BrowserStack Local Binary to be started before the test incase test is triggered locally
-* To turn off Local Testing set browserstack.local:false
+* To turn off Local Testing set capability browserstack.local:false in the browserprofile in GebConfig.groovy 
 
 ## Running your tests
 
