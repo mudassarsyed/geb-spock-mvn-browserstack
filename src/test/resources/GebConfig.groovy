@@ -5,7 +5,7 @@
 */
 
 import geb.driver.BrowserStackDriverFactory
-def browserStackBrowser = System.getProperty("browser")
+def browserStackBrowser = System.getProperty("browser") /*Set browser profile here */
 switch(browserStackBrowser)
 {
 case "ff" :
