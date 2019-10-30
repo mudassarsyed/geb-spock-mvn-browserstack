@@ -27,8 +27,10 @@
 * You can export the environment variables for the Username and Access Key of your BrowserStack account
 
   ```
-  export BROWSERSTACK_USERNAME=<browserstack-username> &&
+  export BROWSERSTACK_USERNAME=<browserstack-username>
   export BROWSERSTACK_ACCESS_KEY=<browserstack-access-key>
+  export BROWSERSTACK_LOCAL=<true/false>
+  export BROWSERSTACK_LOCAL_IDENTIFIER=<browserstack-local-identifier,eg:test123>
   ```
 ## Additional Resources
 * [Customizing your tests on BrowserStack](https://www.browserstack.com/automate/capabilities)
