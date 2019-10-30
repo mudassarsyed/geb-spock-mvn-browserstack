@@ -1,6 +1,6 @@
 # Geb-Spock-BrowserStack with Maven
 
-[Geb](https://gebish.org) and [Spock] (http://spockframework.org) Integration with BrowserStack.
+[Geb](https://gebish.org) and Spock Integration with BrowserStack.
 
 ![BrowserStack Logo](https://d98b8t1nnulk5.cloudfront.net/production/images/layout/logo-header.png?1469004780)
 
