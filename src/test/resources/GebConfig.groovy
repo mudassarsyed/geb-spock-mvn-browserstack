@@ -40,6 +40,15 @@ driver = {
     def browserstackLocalIdentifier = System.getenv("BROWSERSTACK_LOCAL_IDENTIFIER");
     new BrowserStackDriverFactory().create(username, accessKey,['build': 'Geb-Spock-Mvn-Test','name' : 'local', 'browser':'chrome','os': 'Windows','os_version': '8','browser_version': '76','browserstack.local': 'true',"browserstack.localIdentifier":browserstackLocalIdentifier])
 }
+
+case "inbound" :
+driver = {
+    def username = System.getenv("BROWSERSTACK_USERNAME")
+    assert username
+    def accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY")
+    assert accessKey
+    new BrowserStackDriverFactory().create(username, accessKey,['build': 'Geb-Spock-Mvn-Test','name' : 'local', 'browser':'chrome','os': 'Windows','os_version': '8','browser_version': '76'])
+}
     break
 }
 
