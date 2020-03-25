@@ -41,13 +41,13 @@ driver = {
     new BrowserStackDriverFactory().create(username, accessKey,['build': 'Geb-Spock-Mvn-Test','name' : 'local', 'browser':'chrome','os': 'Windows','os_version': '8','browser_version': '76','browserstack.local': 'true',"browserstack.localIdentifier":browserstackLocalIdentifier])
 }
 
-case "inbound" :
+case "mobile" :
 driver = {
     def username = System.getenv("BROWSERSTACK_USERNAME")
     assert username
     def accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY")
     assert accessKey
-    new BrowserStackDriverFactory().create(username, accessKey,['build': 'Geb-Spock-Mvn-Test','name' : 'inbound', 'browser':'chrome','os': 'Windows','os_version': '8','browser_version': '76'])
+    new BrowserStackDriverFactory().create(username, accessKey,['build': 'Geb-Spock-Mvn-Test','name' : 'mobile', 'device':'iPhone 8 Plus','os_version': '11','real_mobile': 'true','browserstack.local': 'false'])
 }
     break
 }
